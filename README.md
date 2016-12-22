@@ -80,19 +80,19 @@ La librería detecta si se trata de una elemento `<img>` o no. En caso de no ser
 
 ## Páginas
 
-- [Home](https://campsjos.github.io/montib/index.html)
-- [Secciones principales](https://campsjos.github.io/montib/secciones-principales.html)
-- [Galería multimedia](https://campsjos.github.io/montib/galeria-multimedia.html)
-- [Blog](https://campsjos.github.io/montib/listado-blog.html)
-- [Detalle blog](https://campsjos.github.io/montib/detalle-blog.html)
-- [Habitaciones](https://campsjos.github.io/montib/listado-habitaciones.html)
-- [Detalle habitacion](https://campsjos.github.io/montib/detalle-habitacion.html)
-- [Ofertas](https://campsjos.github.io/montib/listado-ofertas.html)
-- [Detalle oferta](https://campsjos.github.io/montib/detalle-oferta.html)
-- [Detalle genérico](https://campsjos.github.io/montib/detalle-generico.html)
-- [Tarifas](https://campsjos.github.io/montib/tarifas.html)
-- [Contacto](https://campsjos.github.io/montib/contacto.html)
-- [Formulario](https://campsjos.github.io/montib/form.html)
+- [Home](https://atoomstudio.github.io/montib/index.html)
+- [Secciones principales](https://atoomstudio.github.io/montib/secciones-principales.html)
+- [Galería multimedia](https://atoomstudio.github.io/montib/galeria-multimedia.html)
+- [Blog](https://atoomstudio.github.io/montib/listado-blog.html)
+- [Detalle blog](https://atoomstudio.github.io/montib/detalle-blog.html)
+- [Habitaciones](https://atoomstudio.github.io/montib/listado-habitaciones.html)
+- [Detalle habitacion](https://atoomstudio.github.io/montib/detalle-habitacion.html)
+- [Ofertas](https://atoomstudio.github.io/montib/listado-ofertas.html)
+- [Detalle oferta](https://atoomstudio.github.io/montib/detalle-oferta.html)
+- [Detalle genérico](https://atoomstudio.github.io/montib/detalle-generico.html)
+- [Tarifas](https://atoomstudio.github.io/montib/tarifas.html)
+- [Contacto](https://atoomstudio.github.io/montib/contacto.html)
+- [Formulario](https://atoomstudio.github.io/montib/form.html)
 - [Landing](http://montiboli.atoom.me/landing.html)
 
 ### Inicio
