@@ -16,6 +16,8 @@
 
 En esta guía trataremos de mostrar los aspectos básicos de funcionamiento de la maquetación llevada a cabo para el Hotel Montíboli con el objetivo de facilitar su integración con el CMS pertinente.
 
+**Nota:** Para evitar que se indexe esta web hemos añadido el meta tag `<meta name="robots" content="noindex">` en todas las páginas. Recordad que debeis eliminarlo cuando el proyecto esté en producción
+
 ## Librerías de terceros
 
 ##### Bootstrap v3.3.7 - [Docs](https://github.com/twbs/bootstrap)
@@ -373,6 +375,30 @@ Para insertar un mapa de Google Maps centrado en la dirección del Hotel hay que
 
 `<div id="map"></div>`
 
+Para que funcione Google Maps hay que añadirle a la URL de carga del script una Api Key, para ello debereis [conseguir una](https://developers.google.com/maps/documentation/javascript/get-api-key) y modificar el archivo `scripts.js`:
+
+```javascript
+/**
+ * Carga asíncrona del script de Google Maps
+ */
+function loadMapsScript(callback) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    if (callback) {
+        if (isOldIE) {
+            script.onreadystatechange = function () {
+                if (this.readyState === 'complete') {
+                    setTimeout(callback, 1500);
+                }
+            };
+        }
+        script.onload = callback;
+    }
+    document.getElementsByTagName('head')[0].appendChild(script);
+    //script.src = 'https://maps.googleapis.com/maps/api/js';
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=VUESTRA_API_KEY';
+}
+```
 
 ## Responsive
 
