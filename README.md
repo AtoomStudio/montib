@@ -10,6 +10,7 @@
 - [Vídeos fullwidth](#vídeos-fullwidth)
 - [Mapas](#mapas)
 - [Responsive](#responsive)
+- [Traducciones](#traducciones)
 
 
 ## Introducción
@@ -408,3 +409,131 @@ Se han modificado las Media Quieries por defecto de Bootstrap quedando de la sig
 - SM (≥768px)
 - MD (≥992px)
 - LG (≥1000px)
+
+## Traducciones
+
+Se ha creado un sencillo sistema de traducciones para los contenidos generados por JavaScript.
+
+El idioma de la página se define cargando el archivo `.js` correspondiente dentro de la capeta `/locales`:
+
+```javascript
+<script src="assets/js/locale/ca.js"></script>
+```
+
+Este archivo está compuesto por dos partes, la primera corresponde a la configuración de idioma de la librería `moment.js` y la segunda son los textos que hemos añadido nosotros para usarlos en nuestros scripts.
+
+Así pues, la forma más sencilla de añadir un idioma es descargando [el archivo de traducción de `moment.js`](https://github.com/moment/moment/tree/develop/locale) correspondiente y añadirle al final el resto de textos.
+
+Veamos el ejemplo del archivo `es.js` para el idioma español:
+
+```javascript
+//Esta es la parte de moment.js, la dejamos tal y como está al descargarla
+;(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined'
+       && typeof require === 'function' ? factory(require('../moment')) :
+   typeof define === 'function' && define.amd ? define(['moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+
+    var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_'),
+        monthsShort = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_');
+
+    var es = moment.defineLocale('es', {
+        months : 'enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre'.split('_'),
+        monthsShort : function (m, format) {
+            if (/-MMM-/.test(format)) {
+                return monthsShort[m.month()];
+            } else {
+                return monthsShortDot[m.month()];
+            }
+        },
+        monthsParseExact : true,
+        weekdays : 'domingo_lunes_martes_miércoles_jueves_viernes_sábado'.split('_'),
+        weekdaysShort : 'dom._lun._mar._mié._jue._vie._sáb.'.split('_'),
+        weekdaysMin : 'do_lu_ma_mi_ju_vi_sá'.split('_'),
+        weekdaysParseExact : true,
+        longDateFormat : {
+            LT : 'H:mm',
+            LTS : 'H:mm:ss',
+            L : 'DD/MM/YYYY',
+            LL : 'D [de] MMMM [de] YYYY',
+            LLL : 'D [de] MMMM [de] YYYY H:mm',
+            LLLL : 'dddd, D [de] MMMM [de] YYYY H:mm'
+        },
+        calendar : {
+            sameDay : function () {
+                return '[hoy a la' + ((this.hours() !== 1) ? 's' : '') + '] LT';
+            },
+            nextDay : function () {
+                return '[mañana a la' + ((this.hours() !== 1) ? 's' : '') + '] LT';
+            },
+            nextWeek : function () {
+                return 'dddd [a la' + ((this.hours() !== 1) ? 's' : '') + '] LT';
+            },
+            lastDay : function () {
+                return '[ayer a la' + ((this.hours() !== 1) ? 's' : '') + '] LT';
+            },
+            lastWeek : function () {
+                return '[el] dddd [pasado a la' + ((this.hours() !== 1) ? 's' : '') + '] LT';
+            },
+            sameElse : 'L'
+        },
+        relativeTime : {
+            future : 'en %s',
+            past : 'hace %s',
+            s : 'unos segundos',
+            m : 'un minuto',
+            mm : '%d minutos',
+            h : 'una hora',
+            hh : '%d horas',
+            d : 'un día',
+            dd : '%d días',
+            M : 'un mes',
+            MM : '%d meses',
+            y : 'un año',
+            yy : '%d años'
+        },
+        ordinalParse : /\d{1,2}º/,
+        ordinal : '%dº',
+        week : {
+            dow : 1, // Monday is the first day of the week.
+            doy : 4  // The week that contains Jan 4th is the first week of the year.
+        }
+    });
+
+    return es;
+
+}));
+
+//Esta parte es la que usaremos para insertar traducciones en nuestros JS y que en caso de añadir un nuevo idioma deberá copiarse al final del archivo de moment.js y traducir al idioma que toque
+window.localeStr = {
+    lang: "es", //Definir el código de idioma (es, ca, en, ru, etc...)
+    NOCHE: "noche", //A partir de aqui para abajo ir traduciendo cada cadena, respetando mayúsculas y minúsculas
+    NOCHES: "noches",
+    HABITACION: "Habitación",
+    ADULTOS: "adultos",
+    ADULTO: "adulto",
+    NINO: "niño",
+    NINO_CAP: "Niño",
+    NINOS: "niños",
+    BEBE: "bebé",
+    BEBES: "bebés",
+    EDAD: "edad",
+    ANOS: "años"
+};
+
+//Estos son los textos del mensaje que aceptación de cookies, solo hay que traducir "message", "dismiss" y "learnMore"
+window.cookieconsent_options = {"message":"Esta pagina web usa cookies para asegurarnos que recibes la mejor experiencia como usuario","dismiss":"¡De acuerdo!","learnMore":"Más info","link":"#","theme":"dark-bottom"};
+```
+
+Una vez cargado el idioma si queremos usarlo en un script sólo tendremos que acceder al atributo de `window.localeStr` correspondiente:
+
+```javascript
+console.log(window.localeStr.NINO_CAP); 
+// Niño
+console.log(window.localeStr.HABITACION); 
+// Habitación
+```
+
+En la carpeta `/assets/js/locale/` encontrareis los idiomas que se han creado y configurado para esta prueba.
