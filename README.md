@@ -410,6 +410,8 @@ Se han modificado las Media Quieries por defecto de Bootstrap quedando de la sig
 - MD (≥992px)
 - LG (≥1000px)
 
+Podreis descargar la versión de Bootstrap modificada en [este enlace](http://getbootstrap.com/customize/?id=aac3413d46fdabb9095bf126bac91ab8)
+
 ## Traducciones
 
 Se ha creado un sencillo sistema de traducciones para los contenidos generados por JavaScript.
