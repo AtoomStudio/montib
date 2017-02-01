@@ -7544,8 +7544,8 @@ ul.dropdown-language li a:hover {
   width: 60px;
   margin: 0 auto;
   float: left;
-  -webkit-transition: .6s;
-  transition: .6s;
+  /*-webkit-transition: .6s;
+    transition: .6s;*/
 }
 #logo .text {
   line-height: 1;
@@ -7584,9 +7584,9 @@ ul.dropdown-language li a:hover {
 #logo h1 {
   margin: 0;
 }
-a#logo img:hover {
-  opacity: .5;
-}
+/*a#logo img:hover {
+    opacity: .5;
+}*/
 /*#header .book-area {
     float: right;
 }*/
