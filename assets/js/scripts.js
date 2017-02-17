@@ -690,6 +690,13 @@ $(document).ready(function () {
 	});
 
 	/**
+	 * Corrige bug en las animaciones de lazyload en firefox
+	 */
+	$('.load-item').on('transitionend webkitTransitionEnd oTransitionEnd', function () {
+		$(this).css('position', 'static');
+	});
+
+	/**
 	 * Botón "Reservar"
 	 */
 	$('.b_reservar').click(function () {
