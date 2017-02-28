@@ -377,7 +377,6 @@ function loadImages(type, num) {
 		generateGallery(galeria_videos, container, 6);
 	} else {
 		images = $(container).data('items');
-		console.log(images);
 		images = images.split(',');
 		if (window.breakpoint === 'xs') {
 			generateCarousel(images, container);
@@ -452,7 +451,7 @@ function generateGallery(images, container, number) {
 		});
 		if (container === '#links-videos') {
 			img_link.attr('data-youtube-id', images[i]);
-			img_link.attr('href', 'https://www.youtube.com/watch?v=' + images[i]);
+			img_link.attr('href', 'https://www.youtube-nocookie.com/watch?v=' + images[i]);
 
 			images[i] = 'https://img.youtube.com/vi/' + images[i] + '/hqdefault.jpg';
 		}
@@ -654,7 +653,7 @@ $(document).ready(function () {
 				var poster = 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg';
 				links.push({
 					title: 'Titol',
-					href: 'https://www.youtube.com/watch?v=' + id,
+					href: 'https://www.youtube-nocookie.com/watch?v=' + id,
 					type: 'text/html',
 					poster: poster,
 					youtube: id
