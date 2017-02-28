@@ -6927,7 +6927,7 @@ input {
 .load-item {
   -webkit-transition: .6s;
   transition: .6s;
-  position: relative;
+  /*position: static;*/
   top: 40px;
   opacity: 0;
 }
@@ -8989,6 +8989,9 @@ button.b_volver_arriba img {
   border: 0 none;
   border-radius: 0;
   background-color: transparent;
+}
+.blueimp-gallery > .slides > .slide > .video-content > iframe {
+  top: 0;
 }
 .landing .advantages .advantage {
   padding: 0 5px;
