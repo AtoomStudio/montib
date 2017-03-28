@@ -1,0 +1,71 @@
+#container-video { display: none;}
+#links-videos img {
+	width: 100%;
+}
+#breadcrumbs { border-bottom: 1px solid #e4e4e4;}
+.v-center { top:25%;}
+.b_generic01 { background-image: url(../img/fletxa_link_lila-ie.png);}
+input.b_generic01 { display: block!important; width: 75px;}
+.b_generic01:hover {padding-right: 23px;}
+/*.links-listado-habitaciones {
+	width: 200px;
+	margin: 0 auto;
+}*/
+/*.links-listado-habitaciones .b_generic01 {
+	display: inline!important;
+}*/
+#carousel-home .item .carousel-caption a.link_slide { background-image: url(../img/fletxa_link-ie.png);}
+.b_galeria .mark { background-image: url(../img/fletxa_link_gris-ie.png);}
+.sidebar-blog .link_facebook {background-image: url(../img/blog/ico_facebook_sidebar-ie.png);}
+.sidebar-blog .link_pinterest {background-image: url(../img/blog/ico_pinterest_sidebar-ie.png);}
+.sidebar-blog .newsletter.widget INPUT[type='submit'] {background-image: url(../img/fletxa_link_gris-ie.png);}
+.post .facebook.link_compartir {background-image:url(../img/ico_facebook_blog-ie.png);}
+.post .pinterest.link_compartir{background-image:url(../img/ico_pinterest_blog-ie.png);}
+.post .whatsapp.link_compartir { background-image:url(../img/ico_whatsapp_blog-ie.png);}
+
+/*#info-detalle .amenities-list li .animales {background-image:url(../img/amenities/admiten-animales-ie.png);}
+#info-detalle .amenities-list li .mar {background-image:url(../img/amenities/vista-mar-ie.png);}
+#info-detalle .amenities-list li .jardin-mar{background-image:url(../img/amenities/vista-jardin-mar-ie.png);}
+#info-detalle .amenities-list li .mar-lateral{background-image:url(../img/amenities/vista-mar-lateral-ie.png);}
+#info-detalle .amenities-list li .capacidad-2pax {background-image:url(../img/amenities/capacidad-2pax-ie.png);}
+#info-detalle .amenities-list li .free-wifi {background-image:url(../img/amenities/wifi-gratuita-ie.png);}
+#info-detalle .amenities-list li .minibar {background-image:url(../img/amenities/minibar-gratuito-ie.png);}
+#info-detalle .amenities-list li .te-cafe {background-image:url(../img/amenities/te-cafe-cortesia-ie.png);}
+#info-detalle .amenities-list li .capacidad-3pax {background-image:url(../img/amenities/capacidad-3pax-ie.png);}
+#info-detalle .amenities-list li .capacidad-1pax {background-image:url(../img/amenities/capacidad-1pax-ie.png);}*/
+
+ul.dropdown-opcions li.mi-reserva a {background-image:url(../img/ico_mireserva-ie.png);}
+ul.dropdown-opcions li.tarifas a {background-image:url(../img/ico_tarifas-ie.png);}
+
+#info-contacto .facebook {background-image:url(../img/ico_facebook_contacto-ie.png); margin-right: 20px; }
+#info-contacto .pinterest {background-image:url(../img/ico_pinterest_contacto-ie.png); }
+
+.book-landing .book-landing-button { background-image: url(../img/fletxa_link_blanca-ie.png); }
+
+.landing .advantages .advantage .tick {background-image: url(../img/tick-advantages-ie.png); }
+
+#header { border-bottom: 1px solid #eee;}
+
+.cont-menu { border-bottom: 1px solid #eee; border-left: 1px solid #eee;}
+
+.load-item, #prefooter .prefooter-box .col, #listado-habitaciones .row, #listado-blog .fila_listado_blog  {
+    top: 0 !important;
+    left: 0 !important;
+    opacity: 1 !important;
+}
+
+.cc_container .cc_message { font-size: .9em !important;}
+.cc_container .cc_btn { font-size: .9em !important;}
+
+select.select01 { background-image: none; padding: 10px;}
+input.radio01[type="radio"] + label span { display: none;}
+input.check01[type="checkbox"] + label span { display: none;}
+input.radio01[type="radio"] { display: inline;}
+input.check01[type="checkbox"] { display: inline;}
+
+
+
+#logo { min-width: 300px;}
+#logo sup { font-size: 12px;}
+
+.b_volver_arriba { width: 105px;}
