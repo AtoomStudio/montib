@@ -6917,6 +6917,7 @@ input {
 .image-effect-link img {
   -webkit-transition: 2s;
   transition: 2s;
+  position: relative;
 }
 .image-effect-link:hover img {
   opacity: .8;
